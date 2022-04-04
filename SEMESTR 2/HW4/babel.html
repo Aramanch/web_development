@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hello React</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    
+</head>
+<body>
+
+ 
+       <div id="app">    <script type="text/babel"> 
+
+const userClassName = "user-info";
+    const styleObj = {
+        color:'black', 
+        fontFamily:'Georgia'
+    };
+
+
+       
+function Hello() {
+  return <h1>Привет</h1>;
+}
+class Hellllo extends React.Component {
+  render() {
+    return <h1>Привет</h1>;
+  }
+}
+
+
+
+
+var Helllo =() => {
+    return (<h1>Стрелочная функция</h1>);
+}
+
+
+
+
+
+    ReactDOM.render(
+        <div className={userClassName} style={styleObj}>
+    
+        <h1>{Hello()}</h1>
+        <h1>Hello React</h1>
+        <h2>{Helllo()}</h2>
+        
+
+        
+         
+
+
+
+    </div>,
+        document.getElementById("app")
+    )
+
+
+   
+       </script>
+        </div>
+    
+       <script src="/Users/Aram/Downloads/ThirdKurs/web/react.js"></script>
+</body>
+</html> 
