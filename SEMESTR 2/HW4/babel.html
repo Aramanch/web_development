@@ -11,56 +11,86 @@
 <body>
 
  
-       <div id="app">    <script type="text/babel"> 
-
-const userClassName = "user-info";
+       <div id="app">    <script type="text/babel">
+    const userClassName = "user-info";
     const styleObj = {
-        color:'black', 
-        fontFamily:'Georgia'
+    color:'orange',
+    fontFamily:'Gill Sans'
     };
 
 
-       
-function Hello() {
-  return <h1>Привет</h1>;
-}
-class Hellllo extends React.Component {
-  render() {
-    return <h1>Привет</h1>;
-  }
-}
+
+
+
+    function Hello() {
+    return
+    <h1>Привет</h1>;
+    }
+
+
+    class Timer extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = { seconds: 0 };
+    }
+
+    tick() {
+    this.setState(state => ({
+    seconds: state.seconds + 1
+    }));
+    }
+
+    componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+    }
+
+    componentWillUnmount() {
+    clearInterval(this.interval);
+    }
+
+    render() {
+    return (
+    <div>
+        <h3>Вызов метода класса</h3>
+        Seconds: {this.state.seconds}
+    </div>
+    );
+    }
+    }
 
 
 
 
-var Helllo =() => {
-    return (<h1>Стрелочная функция</h1>);
-}
+
+
+
+    var Helllo =() => {
+    return (
+    <h1>Стрелочная функция</h1>);
+    }
 
 
 
 
 
     ReactDOM.render(
-        <div className={userClassName} style={styleObj}>
-    
+    <div className={userClassName} style={styleObj}>
+
         <h1>{Hello()}</h1>
         <h1>Hello React</h1>
         <h2>{Helllo()}</h2>
-        
+        <h1><Timer /></h1>
 
-        
-         
 
 
 
     </div>,
-        document.getElementById("app")
+    document.getElementById("app")
     )
 
 
-   
-       </script>
+
+</script>
         </div>
     
        <script src="/Users/Aram/Downloads/ThirdKurs/web/react.js"></script>
